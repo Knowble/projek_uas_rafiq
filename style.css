@@ -73,12 +73,19 @@ body {
 }
 
 .container-circle {
+	position: fixed;
     top: 0;
     left: 0;
+	height: 100vh;
+	width: 100vw;
     z-index: -1;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.inside-container {
+	margin: 12rem !important;
 }
 
 .noise {
@@ -280,11 +287,14 @@ body {
 }
 
 @media (max-width: 768px) {
+	.inside-container {
+		margin: 3rem !important;
+	}
 	.container-circle {
-	  flex-direction: column; /* Stack columns on smaller screens */
-	  text-align: center; /* Center text on smaller screens */
+	  flex-direction: column;
+	  text-align: center;
 	}
 	.col-md-4 {
-	  margin-bottom: 20px; /* Add spacing between image and text on smaller screens */
+	  margin-bottom: 20px;
 	}
   }
