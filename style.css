@@ -13,7 +13,7 @@ body {
 
 body {
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
     font-family: 'Fira Mono', monospace !important;
 }
 
@@ -78,7 +78,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     z-index: -1;
     display: flex;
     justify-content: center;
@@ -86,13 +86,23 @@ body {
     margin: 0;
 }
 
+.center-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	max-width: 800px; /* Set a maximum width for the container */
+	margin: 0 auto; /* Center the container horizontally */
+	overflow-y: auto; /* Allow vertical scrolling */
+  }
+
 .noise {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	overflow: auto;
 	z-index: 400;
 	opacity: 0.8;
 	pointer-events: none;
