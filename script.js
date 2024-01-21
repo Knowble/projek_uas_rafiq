@@ -85,3 +85,30 @@ document.body.addEventListener('mousemove', (e) => {
 });
 
 moveCursor();
+
+const awardsImage = document.querySelector('.awards');
+
+  // Get all paragraphs with the class 'lead'
+  const leadParagraphs = document.querySelectorAll('.lead');
+
+  // Add event listener for mouseover on each 'lead' paragraph
+  leadParagraphs.forEach(paragraph => {
+    paragraph.addEventListener('mouseover', function() {
+      awardsImage.style.opacity = 0;
+      setTimeout(() => {
+        awardsImage.src = `./assets/cat${Math.floor(Math.random() * 5)}.jpg`;
+        awardsImage.style.opacity = 1;
+      }, 500);
+    });
+
+    // Add event listener for mouseout to reset the image
+    paragraph.addEventListener('mouseout', function() {
+      awardsImage.style.opacity = 0;
+      setTimeout(() => {
+        awardsImage.src = "";
+        awardsImage.style.opacity = 1;
+      }, 500);
+    });
+  });
+
+  
