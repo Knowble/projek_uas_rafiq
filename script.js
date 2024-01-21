@@ -1,3 +1,4 @@
+
 // time counter
 function checkTime(i) {
   if (i < 10) {
